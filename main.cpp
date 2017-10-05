@@ -2,8 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "Timer.h"
-
-int create_array(int,char);
+#include "MyArray.h"
 
 using namespace std;
 
@@ -31,7 +30,17 @@ int main()
 
     //Choose the sorting algorithm
 
+    char algorithm;
+
+    cout << "\nChoose the sorting algorithm:\n"
+         << "1. Bubble Sort\n"
+         << "-> ";
+
+    cin >> algorithm;
+
     //Generate array
+
+    MyArray arr(array_size, sorting, algorithm);
 
     //Sort and calculate time spent on sorting
 
@@ -43,16 +52,9 @@ int main()
 
     timer.stop();
 
-    cout << "Total time: " << timer.total() << " seconds" << endl;
+    cout << "\nTotal time: " << timer.total() << " seconds" << endl;
 
     return 0;
-}
-
-int create_array(int array_size, char order)
-{
-    int *arr = new int[array_size];
-
-    delete arr;
 }
 
 
