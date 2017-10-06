@@ -1,6 +1,10 @@
 #ifndef MYARRAY_H_INCLUDED
 #define MYARRAY_H_INCLUDED
+
 #include <iostream>
+#include <stdlib.h> //Random
+#include <time.h> //Use as a random seed
+#include "Algorithms.h"
 
 class MyArray
 {
@@ -16,7 +20,7 @@ class MyArray
                 1. Crescent
                 2. Decrescent
                 3. Random
-            */
+            */ 
             arr = new int[arr_size];
             switch (order)
             {
@@ -29,10 +33,12 @@ class MyArray
                         arr[i] = arr_size - 1 - i;
                     break;
                 case '3':
+                    srand (time(NULL));
+                    for (int i = 0; i < arr_size; i++)
+                        arr[i] = rand() % arr_size;
                     break;
             }
         }
-
 
     public:
         MyArray(int a_size, char ord, char alg)
@@ -54,6 +60,14 @@ class MyArray
             /*
                 1. Bubble Sort
             */
+            switch(algorithm)
+            {
+                case '1':
+                    bubble_sort(arr,arr_size);
+                    for(int i =0; i<arr_size; i++)
+                        std::cout << arr[i] << std::endl;
+                    break;
+            }
         }
 
 };

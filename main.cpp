@@ -48,7 +48,7 @@ int main()
 
     timer.start();
 
-    /*insert here the sorting method*/
+    arr.sort_array();
 
     timer.stop();
 
