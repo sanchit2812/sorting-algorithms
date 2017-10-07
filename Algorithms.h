@@ -1,8 +1,6 @@
 #ifndef ALGORITHMS_H_INCLUDED
 #define ALGORITHMS_H_INCLUDED
 
-#include <iostream>
-
 void bubble_sort(int* & arr, int arr_size)
 {
     bool changed = true;
