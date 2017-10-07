@@ -37,4 +37,26 @@ void insertion_sort(int* & arr, int arr_size)
         }
     }
 }
+
+void selection_sort(int* & arr, int arr_size)
+{
+    for(int sorted_i = 0; sorted_i < arr_size; sorted_i++)
+    {
+        int min_i = sorted_i;
+        for (int j = sorted_i + 1; j < arr_size; j++)
+        {
+            if(arr[j] < arr[min_i])
+            {
+                min_i = j;
+            }
+        }
+        if(arr[sorted_i] != arr[min_i])
+        {
+            int tmp = arr[sorted_i];
+            arr[sorted_i] = arr[min_i];
+            arr[min_i] = tmp;
+        }
+
+    }
+}
 #endif // ALGORITHMS_H_INCLUDED

@@ -35,6 +35,7 @@ int main()
     cout << "\nChoose the sorting algorithm:\n"
          << "1. Bubble Sort\n"
          << "2. Insertion Sort\n"
+         << "3. Selection Sort\n"
          << "-> ";
 
     cin >> algorithm;

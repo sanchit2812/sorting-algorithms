@@ -59,6 +59,8 @@ class MyArray
         {
             /*
                 1. Bubble Sort
+                2. Insertion Sort
+                3. Selection Sort
             */
             switch(algorithm)
             {
@@ -67,6 +69,9 @@ class MyArray
                     break;
                 case '2':
                     insertion_sort(arr,arr_size);
+                    break;
+                case '3':
+                    selection_sort(arr,arr_size);
                     break;
             }
         }
