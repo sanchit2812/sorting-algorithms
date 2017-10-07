@@ -52,7 +52,7 @@ int main()
 
     timer.stop();
 
-    cout << "\nTotal time: " << timer.total() << " seconds" << endl;
+    cout << "\nTotal time: " << timer.total() << " ms" << endl;
 
     return 0;
 }

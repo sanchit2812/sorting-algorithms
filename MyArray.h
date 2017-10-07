@@ -64,8 +64,6 @@ class MyArray
             {
                 case '1':
                     bubble_sort(arr,arr_size);
-                    for(int i =0; i<arr_size; i++)
-                        std::cout << arr[i] << std::endl;
                     break;
             }
         }

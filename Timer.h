@@ -5,27 +5,28 @@
 class Timer
 {
     private:
-        time_t t1;
-        time_t t2;
+        clock_t c1;
+        clock_t c2;
 
     public:
         Timer()
         {
-            t1 = time(NULL);
-            t2 = time(NULL);
+            c1 = clock();
+            c2 = clock();
         }
 
         void start()
         {
-            t1 = time(NULL);
+            c1 = clock();
         }
         void stop()
         {
-            t2 = time(NULL);
+            c2 = clock();
         }
         time_t total()
         {
-            return t2 - t1;
+            double diffms=(c2-c1)/(CLOCKS_PER_SEC/1000);
+            return diffms;
         }
 };
 
