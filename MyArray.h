@@ -65,6 +65,9 @@ class MyArray
                 case '1':
                     bubble_sort(arr,arr_size);
                     break;
+                case '2':
+                    insertion_sort(arr,arr_size);
+                    break;
             }
         }
 

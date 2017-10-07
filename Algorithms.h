@@ -25,4 +25,18 @@ void bubble_sort(int* & arr, int arr_size)
     }
 }
 
+void insertion_sort(int* & arr, int arr_size)
+{
+    for(int sorted_i = 1; sorted_i < arr_size; sorted_i++)
+    {
+        int j = sorted_i;
+        while(j > 0 && arr[j] < arr[j-1])
+        {
+            int tmp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = tmp;
+            j--;
+        }
+    }
+}
 #endif // ALGORITHMS_H_INCLUDED
