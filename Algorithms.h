@@ -59,4 +59,37 @@ void selection_sort(int* & arr, int arr_size)
 
     }
 }
+
+//======Quick sort=======
+
+int partition(int* & arr, int lo, int hi)
+{
+    int pivot = arr[hi];
+    int i = lo - 1;
+    for(int j = lo; j <= hi - 1; ++j)
+    {
+        if (arr[j] <= pivot)
+        {
+            i++;
+            std::swap(arr[i], arr[j]);
+        }
+    }
+    std::swap(arr[i + 1], arr[hi]);
+    return (i + 1);
+}
+
+void quick_sort(int* &arr, int lo, int hi)
+{
+    if (lo < hi)
+    {
+        int pi = partition(arr, lo, hi);
+        
+        quick_sort(arr, lo, pi - 1);
+        quick_sort(arr, pi + 1, hi);
+    } 
+}
+
+//Adapted algorithm from Cosmos by OpenGenus Foundation
+//=======================
+
 #endif // ALGORITHMS_H_INCLUDED

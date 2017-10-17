@@ -36,6 +36,7 @@ int main()
          << "1. Bubble Sort\n"
          << "2. Insertion Sort\n"
          << "3. Selection Sort\n"
+         << "4. Quick Sort\n"
          << "-> ";
 
     cin >> algorithm;

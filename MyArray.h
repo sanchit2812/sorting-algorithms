@@ -73,6 +73,9 @@ class MyArray
                 case '3':
                     selection_sort(arr,arr_size);
                     break;
+                case '4':
+                    quick_sort(arr,0,arr_size-1);
+                    break;
             }
         }
 
