@@ -1,26 +1,28 @@
-# sorting-algorithms
+# Instructions to Add new sorting techniques to this Repository
 
-This project has the objective of studying sorting algorithms and C++.
+Lets say you want to add `X sort` in this repository
 
-It is a simple program that prompts the user to input the number of elements that will be stored in a dynamically allocated array, to input the way that it is ordered (i.e. Crescent, Decrescent or Random) and to input the sorting algorithm.
+## changes in Algorithms.h
+Add the following line to Algorithms.h
 
-Finally the program outputs the time consumed just to sort the array.
+`//=====X sort====`
 
-## Currently included sorting algorithms:
-- [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
+-- Add the code for `X sort` here --
 
-a slow simple comparison sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. 
+Add the following line
 
-- [insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
+`//===============`
 
-simple sorting algorithm that builds the sorted array one element at a time, creating a sorted list every iteration before adding a new element.
+## changes in main.cpp
+Add the following line to main.cpp (cout << part)
+`<< "n. X Sort\n"`
+where n is next index that will follow
 
-- [selection sort](https://en.wikipedia.org/wiki/Selection_sort)
+## changes in MyArray.cpp
+in sort_array(), add another case
+`case '6':
+                    heap_sort(arr,arr_size);
+                    break;`
+(with proper indentation)
 
-another simple in-place comparison sort, creating a sorted list every iteration and then finding  the smallest (or largest, depending on sorting order) element in the unsorted sublist to insert in the sorted iteration. 
-
-
-- [quicksort](https://en.wikipedia.org/wiki/Quicksort)
-
-one of the more efficient comparison sorts, very similar to selection sort. 
-
+Before making the pull request, make sure to remove a.out file (if there is one)
