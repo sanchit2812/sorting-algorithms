@@ -20,7 +20,7 @@ class MyArray
                 1. Crescent
                 2. Decrescent
                 3. Random
-            */ 
+            */
             arr = new int[arr_size];
             switch (order)
             {
@@ -75,6 +75,12 @@ class MyArray
                     break;
                 case '4':
                     quick_sort(arr,0,arr_size-1);
+                    break;
+                case '5':
+                    merge_sort(arr,0,arr_size-1);
+                    break;
+                case '6':
+                    heap_sort(arr,arr_size);
                     break;
             }
         }
