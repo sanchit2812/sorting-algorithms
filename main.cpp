@@ -38,6 +38,7 @@ int main()
          << "3. Selection Sort\n"
          << "4. Quick Sort\n"
          << "5. Merge Sort\n"
+         << "6. Heap Sort\n"
          << "-> ";
 
     cin >> algorithm;

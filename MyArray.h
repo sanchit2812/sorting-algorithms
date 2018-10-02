@@ -79,6 +79,9 @@ class MyArray
                 case '5':
                     merge_sort(arr,0,arr_size-1);
                     break;
+                case '6':
+                    heap_sort(arr,arr_size);
+                    break;
             }
         }
 
