@@ -37,6 +37,7 @@ int main()
          << "2. Insertion Sort\n"
          << "3. Selection Sort\n"
          << "4. Quick Sort\n"
+         << "5. Merge Sort\n"
          << "-> ";
 
     cin >> algorithm;
@@ -59,5 +60,3 @@ int main()
 
     return 0;
 }
-
-
